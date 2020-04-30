@@ -266,6 +266,8 @@ nmap <leader>ca <plug>NERDCommenterAltDelims
 "about gitgutter
 "disable default key
 let g:gitgutter_map_keys = 0
+"exceeded maximum number of signs,default = 500
+let g:gitgutter_max_signs = 3000
 "jump between hunks
 nmap ]n <Plug>(GitGutterNextHunk)
 nmap [n <Plug>(GitGutterPrevHunk)
