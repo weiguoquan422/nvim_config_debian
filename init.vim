@@ -237,7 +237,7 @@ noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg -S %s", "")<CR><CR>
 "fuzzy find line in buffer
 noremap <leader>sb :<C-U><C-R>=printf("Leaderf line")<CR><CR>
 " search word under cursor, the pattern is treated as regex
-noremap <leader>sd :<C-U><C-R>=printf("Leaderf rg -e %s ", expand("<cword>"))<CR><CR>
+noremap <leader>sd :<C-U><C-R>=printf("Leaderf rg -s %s ", expand("<cword>"))<CR><CR>
 "Recall last rg search result
 noremap <leader>sr :<C-U><C-R>=printf("Leaderf rg --recall")<CR><CR>
 
