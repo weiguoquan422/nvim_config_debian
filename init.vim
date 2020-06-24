@@ -233,7 +233,7 @@ let g:Lf_ShortcutF = "<leader>ff"
 "set separator
 let g:Lf_StlSeparator = { 'left': '', 'right': '' }
 "fuzzy find grep using rg
-noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg -S %s", "")<CR><CR>
+noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
 "fuzzy find line in buffer
 noremap <leader>sb :<C-U><C-R>=printf("Leaderf line")<CR><CR>
 " search word under cursor, the pattern is treated as regex
