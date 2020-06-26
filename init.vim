@@ -167,9 +167,9 @@ let g:ycm_always_populate_location_list = 1
 let g:ycm_min_num_identifier_candidate_chars = 2
 "use a regular expression as a trigger,not must . or -> or enter<Ctrl-space>
 let g:ycm_semantic_triggers =  {
-            \	'c,cpp,python,java,go,erlang,perl':['re!\w{2}'],
-            \	'cs,lua,javascript':['re!\w{2}'],
-            \	'v':['re!\w{2}']
+            \	'v':['re!\w{2}'],
+            \	'c':['re!\w{2}'],
+            \	'cpp':['re!\w{2}']
             \}
 "set F12 to GoTo
 nnoremap <F12> :YcmCompleter GoTo<CR>
