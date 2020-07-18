@@ -85,11 +85,6 @@ nnoremap <Leader>wj <C-W>j
 call plug#begin('~/.local/share/nvim/plugged')
 
 
-"YCM--Do not update YCM when :PlugInstall
-Plug 'ycm-core/YouCompleteMe',{'frozen': 1}
-"snippet
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets',{'frozen': 1}
 "nerdtree
 Plug 'scrooloose/nerdtree'
 "color scheme
@@ -136,61 +131,6 @@ Plug 'aperezdc/vim-template',{'frozen': 1}
 call plug#end()
 
 
-
-
-"about YCM
-"function of triggering YCM location list
-let g:Ycm_location_list_open_flag = 0
-function! Ycm_location_list_trigger() abort
-    if g:Ycm_location_list_open_flag == 0
-        execute 'YcmForceCompileAndDiagnostics'
-        execute 'lopen'
-        let g:Ycm_location_list_open_flag = 1
-        echo g:Ycm_location_list_open_flag
-    else
-        execute 'lclose'
-        let g:Ycm_location_list_open_flag = 0
-        echo g:Ycm_location_list_open_flag
-    endif
-endfunction
-
-
-let g:ycm_global_ycm_extra_conf='./.ycm_extra_conf.py'
-let g:ycm_server_python_interptreter='/usr/lib/python3.7'
-"no diagnostics ui
-let g:ycm_show_diagnostics_ui = 1
-"dont show diagnostic signs in vim gutter
-let g:ycm_enable_diagnostic_signs = 0
-"dont highlight diagnostic
-let g:ycm_enable_diagnostic_highlighting = 0
-"You can also see the full diagnostic message for all the diagnostics in the current file in Vim's locationlist, must enable location_list
-let g:ycm_always_populate_location_list = 1
-"trigger auto complete after entering two chars,but need <Ctrl-space> trigger.
-let g:ycm_min_num_identifier_candidate_chars = 2
-"use a regular expression as a trigger,not must . or -> or enter<Ctrl-space>
-let g:ycm_semantic_triggers =  {
-            \	'v':['re!\w{2}'],
-            \	'c':['re!\w{2}'],
-            \	'cpp':['re!\w{2}']
-            \}
-"set F12 to GoTo
-nnoremap <F12> :YcmCompleter GoTo<CR>
-"force YCM to immediately recompile your file and open location_list window
-nnoremap <F5> :call Ycm_location_list_trigger()<CR><CR>
-"enable seed identifiers from syntax
-let g:ycm_seed_identifiers_with_syntax = 1
-"enable seed identifiers from tags
-let g:ycm_collect_identifiers_from_tags_files = 1
-"no preview wimdow
-set completeopt=menu,menuone
-let g:ycm_add_preview_to_completeopt = 0
-
-
-"use ultisnips
-"let YCM use ultisnips completer
-let g:ycm_use_ultisnips_completer = 1
-"expand snippet and junp next trigger
-let g:UltiSnipsExpandTrigger="<c-j>"
 
 
 "about nerdtree
