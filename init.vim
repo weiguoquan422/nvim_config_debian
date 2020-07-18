@@ -130,7 +130,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 "vimtex
 Plug 'lervag/vimtex'
 "This is a simple plugin for Vim that will allow you to have a set of templates for certain file types.
-Plug 'aperezdc/vim-template'
+Plug 'aperezdc/vim-template',{'frozen': 1}
 
 " Initialize plugin system
 call plug#end()
