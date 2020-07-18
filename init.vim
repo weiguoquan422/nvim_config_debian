@@ -129,6 +129,8 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 "vimtex
 Plug 'lervag/vimtex'
+"This is a simple plugin for Vim that will allow you to have a set of templates for certain file types.
+Plug 'aperezdc/vim-template'
 
 " Initialize plugin system
 call plug#end()
@@ -316,6 +318,9 @@ let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+
+"about templates
+let g:templates_use_licensee=0
 
 
 
