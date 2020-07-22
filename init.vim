@@ -155,6 +155,10 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" coc-bookmark configuration
+nmap <Leader>bt <Plug>(coc-bookmark-toggle)
+nmap <Leader>bl :CocList bookmark<CR>
+
 
 
 

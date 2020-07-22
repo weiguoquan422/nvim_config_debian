@@ -1,3 +1,7 @@
 {
-    "clangd.disableDiagnostics": true
+    "clangd.disableDiagnostics": true,
+
+    "bookmark.sign": {
+        "type": "none",
+    }
 }
