@@ -107,15 +107,13 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 "ludovicchabant/vim-gutentags--generate ctags
 Plug 'ludovicchabant/vim-gutentags'
-"liuchengxu/vista.vim--display ctags
-Plug 'liuchengxu/vista.vim'
 "jiangmiao/auto-pairs
 Plug 'jiangmiao/auto-pairs'
 "mhinz/vim-startify
 Plug 'mhinz/vim-startify'
 "easymotion
 Plug 'easymotion/vim-easymotion'
-"rainbow
+"rainbow:show different levels of brackets in different colors
 Plug 'luochen1990/rainbow'
 "vim markdown
 Plug 'godlygeek/tabular' "this plugin is necessary, it should be before the vim-markdown
@@ -167,6 +165,8 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
+" display outline of current file
+nmap <F2> :CocList outline<CR>
 
 
 
@@ -219,14 +219,6 @@ noremap <leader>sb :<C-U><C-R>=printf("Leaderf line")<CR><CR>
 noremap <leader>sd :<C-U><C-R>=printf("Leaderf rg -s -w %s ", expand("<cword>"))<CR><CR>
 "Recall last rg search result
 noremap <leader>sr :<C-U><C-R>=printf("Leaderf rg --recall")<CR><CR>
-
-
-"about Vista.vim
-nmap <F2> :Vista!!<CR>
-"set show on the left
-let g:vista_sidebar_position = "vertical topleft"
-"Set this option to `1` to close the vista window automatically
-let g:vista_close_on_jump = 1
 
 
 "about nerdcommenter
