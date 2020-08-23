@@ -210,7 +210,7 @@ let g:airline_right_sep=' '
 "fuzzy find file
 let g:Lf_ShortcutF = "<leader>ff"
 "set separator
-let g:Lf_StlSeparator = { 'left': '', 'right': '' }
+let g:Lf_StlSeparator = { 'left': '|', 'right': '|' }
 "fuzzy find grep using rg
 noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
 "fuzzy find line in buffer
