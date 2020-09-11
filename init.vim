@@ -92,13 +92,14 @@ Plug 'scrooloose/nerdtree'
 "color scheme
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
-"airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"lightline
+Plug 'itchyny/lightline.vim'
+"bufferline
+Plug 'bling/vim-bufferline'
 "leaderF--fuzzy find
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-"gina.vim--git
-Plug 'lambdalisue/gina.vim'
+"git
+Plug 'tpope/vim-fugitive'
 "gitgutter--dispaly git diff in gutter
 Plug 'airblade/vim-gitgutter'
 "nerdcommenter--comment
@@ -107,6 +108,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 "ludovicchabant/vim-gutentags--generate ctags
 Plug 'ludovicchabant/vim-gutentags'
+"tagbar show ctags
+Plug 'majutsushi/tagbar'
 "jiangmiao/auto-pairs
 Plug 'jiangmiao/auto-pairs'
 "mhinz/vim-startify
@@ -126,6 +129,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'lervag/vimtex'
 "This is a simple plugin for Vim that will allow you to have a set of templates for certain file types.
 Plug 'aperezdc/vim-template',{'frozen': 1}
+"align text by some character
+Plug 'tommcdo/vim-lion'
 
 " Initialize plugin system
 call plug#end()
@@ -165,9 +170,9 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
-" display outline of current file
-nmap <F2> :CocList outline<CR>
-
+"tagbar
+nmap <F2> :TagbarToggle<CR>
+let g:tagbar_ctags_bin='/usr/bin/ctags'
 
 
 "about nerdtree
@@ -254,13 +259,6 @@ nmap <leader>gc :Gina commit<CR>
 "Gina log
 nmap <leader>gl :Gina log<CR>
 
-
-
-"about indentLine
-"This variable specify a list of file types.
-let g:indentLine_fileType = ['c', 'cpp']
-"When opening these types of files, the plugin is disabled by default.
-let g:indentLine_fileTypeExclude = ['txt', 'sh']
 
 
 "about startify
