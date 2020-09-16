@@ -99,7 +99,7 @@ Plug 'bling/vim-bufferline'
 "leaderF--fuzzy find
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 "git
-Plug 'tpope/vim-fugitive'
+Plug 'lambdalisue/gina.vim'
 "gitgutter--dispaly git diff in gutter
 Plug 'airblade/vim-gitgutter'
 "nerdcommenter--comment
@@ -190,25 +190,6 @@ let NERDTreeMinimalUI=1
 let NERDTreeAutoDeleteBuffer=1
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-
-"about airline
-"Always display status bar
-set laststatus=2
-"Automatically displays all buffers when there's only one tab open;If set,A string of strange characters will appear every time you start vim.
-"let g:airline#extensions#tabline#enabled = 1
-"This affects how file paths are displayed
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-"set tabline separators
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-"enable powerline fonts
-let g:airline_powerline_fonts = 1 
-"When this variable is defined, only the extensions listed will be loaded; an empty array would effectively disable all extensions
-let g:airline_extensions = ['branch', 'tabline']
-"set status line Separators
-let g:airline_left_sep=' '
-let g:airline_right_sep=' '
 
 
 "about LeaderF
