@@ -254,6 +254,8 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 "about vim-markdown
 "highlight mathematical formula
 let g:vim_markdown_math = 1
+"disable syntax concealing
+let g:vim_markdown_conceal = 0
 
 
 "about markdown-preview.nvim
