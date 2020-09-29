@@ -9,7 +9,6 @@ set nocompatible
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 
-
 "about search and display
 "ingnore case when searching with /
 set ic
@@ -44,8 +43,20 @@ vmap <Leader>p "+p
 "alt+right/left to move between buffers
 nmap <A-right> <Esc>:bn<CR>
 nmap <A-left> <Esc>:bp<CR>
+
 "close current buffer
-nmap <Leader>bd <Esc>:bd<CR>
+function! Close_current_buf()
+    let buffer_num=len(getbufinfo({'buflisted':1}))
+    if buffer_num>1
+        :bp|bd #
+    else
+        :bd
+    endif
+    return buffer_num
+endfunction
+
+nmap <Leader>bd :call Close_current_buf()<CR>
+
 "vertical partition window
 nmap <Leader>wv <Esc>:vs<CR>
 "close current window
@@ -123,18 +134,20 @@ Plug 'godlygeek/tabular' "this plugin is necessary, it should be before the vim-
 Plug 'plasticboy/vim-markdown'
 "vim-markdown-toc
 Plug 'mzlogin/vim-markdown-toc'
-"markdown-preview.nvim
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 "vimtex
 Plug 'lervag/vimtex'
 "This is a simple plugin for Vim that will allow you to have a set of templates for certain file types.
 Plug 'aperezdc/vim-template',{'frozen': 1}
 "align text by some character
 Plug 'tommcdo/vim-lion'
+"auto testbench
+Plug 'kdurant/verilog-testbench'
+"vim-SystemVerilog
+Plug 'WeiChungWu/vim-SystemVerilog'
+
 
 " Initialize plugin system
 call plug#end()
-
 
 
 "about coc
@@ -243,7 +256,6 @@ nmap <leader>gc :Gina commit<CR>
 nmap <leader>gl :Gina log<CR>
 
 
-
 "about startify
 "dont allow startify change to dir when open a file
 let g:startify_change_to_dir = 0
@@ -261,10 +273,6 @@ let g:tex_conceal = ""
 let g:vim_markdown_math = 1
 "Disabling conceal for code fences
 let g:vim_markdown_conceal_code_blocks = 0
-
-
-"about markdown-preview.nvim
-let g:mkdp_browser = 'firefox'
 
 
 "about vimtex
@@ -292,4 +300,3 @@ syntax enable
 set foldmethod=indent
 "Close the folding code when you start vim
 set nofoldenable
-
