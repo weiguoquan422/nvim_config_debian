@@ -282,14 +282,10 @@ let g:vim_markdown_conceal_code_blocks = 0
 
 "about vimtex
 let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
+
 
 "about templates
 let g:templates_use_licensee=0
-
 
 
 "color scheme
@@ -298,6 +294,13 @@ set background=dark
 
 "enable syntax
 syntax enable
+
+
+"Code folding based on indent
+"set foldmethod=indent
+set foldmethod=indent
+"Close the folding code when you start vim
+set nofoldenable
 
 
 "CreateMatrix
@@ -311,8 +314,3 @@ endfunction
 command! -nargs=+ Matrix silent call CreateMatrix(<f-args>)
 
 
-"Code folding based on indent
-"set foldmethod=indent
-set foldmethod=indent
-"Close the folding code when you start vim
-set nofoldenable
