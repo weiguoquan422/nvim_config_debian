@@ -300,6 +300,17 @@ set background=dark
 syntax enable
 
 
+"CreateMatrix
+function! CreateMatrix(rows, ...) abort
+  let cols = a:0 ? a:1 : 3
+  let matrix = ['\begin{bmatrix}']
+  call extend(matrix, repeat([repeat('<++> & ', cols - 1) . '<++>\\'], a:rows))
+  call add(matrix, '\end{bmatrix}<++>')
+  call append(line('.') - 1, matrix)
+endfunction
+command! -nargs=+ Matrix silent call CreateMatrix(<f-args>)
+
+
 "Code folding based on indent
 "set foldmethod=indent
 set foldmethod=indent
