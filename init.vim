@@ -144,7 +144,7 @@ Plug 'lervag/vimtex'
 "This is a simple plugin for Vim that will allow you to have a set of templates for certain file types.
 Plug 'aperezdc/vim-template',{'frozen': 1}
 "align text by some character
-Plug 'tommcdo/vim-lion'
+Plug 'junegunn/vim-easy-align'
 "auto testbench
 Plug 'kdurant/verilog-testbench'
 "vim-SystemVerilog
@@ -288,6 +288,14 @@ let g:tex_flavor='latex'
 let g:templates_use_licensee=0
 
 
+"vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+
+
 "color scheme
 colorscheme gruvbox
 set background=dark
@@ -301,16 +309,3 @@ syntax enable
 set foldmethod=indent
 "Close the folding code when you start vim
 set nofoldenable
-
-
-"CreateMatrix
-function! CreateMatrix(rows, ...) abort
-  let cols = a:0 ? a:1 : 3
-  let matrix = ['\begin{bmatrix}']
-  call extend(matrix, repeat([repeat('<++> & ', cols - 1) . '<++>\\'], a:rows))
-  call add(matrix, '\end{bmatrix}<++>')
-  call append(line('.') - 1, matrix)
-endfunction
-command! -nargs=+ Matrix silent call CreateMatrix(<f-args>)
-
-
