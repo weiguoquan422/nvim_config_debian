@@ -117,8 +117,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 "bufferline
 Plug 'bling/vim-bufferline'
-"leaderF--fuzzy find
-"Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 "CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
 "git
@@ -215,23 +213,6 @@ let NERDTreeMinimalUI=1
 let NERDTreeAutoDeleteBuffer=1
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-
-"about LeaderF
-"fuzzy find file
-"let g:Lf_ShortcutF = "<leader>ff"
-"disable separator
-"let g:Lf_DisableStl = 1
-"disable icons
-"let g:Lf_ShowDevIcons = 0
-"fuzzy find grep using rg
-"noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
-"fuzzy find line in buffer
-"noremap <leader>sb :<C-U><C-R>=printf("Leaderf line")<CR><CR>
-" search word under cursor, the pattern is treated as regex
-"noremap <leader>sd :<C-U><C-R>=printf("Leaderf rg -s -w %s ", expand("<cword>"))<CR><CR>
-"Recall last rg search result
-"noremap <leader>sr :<C-U><C-R>=printf("Leaderf rg --recall")<CR><CR>
 
 
 "about nerdcommenter
