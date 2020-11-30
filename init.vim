@@ -48,6 +48,8 @@ vmap <Leader>p "+p
 "alt+right/left to move between buffers
 nmap <A-right> <Esc>:bn<CR>
 nmap <A-left> <Esc>:bp<CR>
+"search for visually selected text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 "close current buffer
 function! Close_current_buf()
