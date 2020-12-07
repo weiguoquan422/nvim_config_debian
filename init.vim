@@ -68,6 +68,8 @@ nmap <Leader>bd :call Close_current_buf()<CR>
 nmap <Leader>wv <Esc>:vs<CR>
 "close current window
 nmap <Leader>wd <Esc>:q<CR>
+"search for word under the cursor but not jump next match
+nnoremap * *``
 
 
 
