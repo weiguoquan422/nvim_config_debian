@@ -69,18 +69,7 @@ nmap <Leader>wv <Esc>:vs<CR>
 "close current window
 nmap <Leader>wd <Esc>:q<CR>
 "search for word under the cursor but not jump next match
-function! StarPositionSave()
-  let g:star_position_cursor = getpos('.')
-  normal! H
-  let g:star_position_top = getpos('.')
-  call setpos('.', g:star_position_cursor)
-endfunction
-function! StarPositionRestore()
-  call setpos('.', g:star_position_top)
-  normal! zt
-  call setpos('.', g:star_position_cursor)
-endfunction
-nnoremap <silent> * :call StarPositionSave()<CR>*:call StarPositionRestore()<CR>
+nnoremap * :keepjumps normal! mi*`i<CR>
 
 
 
