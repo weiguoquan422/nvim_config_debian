@@ -34,6 +34,8 @@ set wildmenu
 set hidden
 "allow use mouse
 set mouse=a
+"dont change directory when open a file
+set noautochdir
 
 
 "about mapping and Leader
@@ -48,8 +50,6 @@ vmap <Leader>p "+p
 "alt+right/left to move between buffers
 nmap <A-right> <Esc>:bn<CR>
 nmap <A-left> <Esc>:bp<CR>
-"search for visually selected text
-vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 "close current buffer
 function! Close_current_buf()
@@ -69,8 +69,7 @@ nmap <Leader>wv <Esc>:vs<CR>
 "close current window
 nmap <Leader>wd <Esc>:q<CR>
 "search for word under the cursor but not jump next match
-nnoremap * :keepjumps normal! mi*`i<CR>
-
+source ~/.config/nvim/starsearch.vim
 
 
 "about indent
@@ -294,6 +293,8 @@ nmap <leader>sf :CtrlPLine<CR>
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 "chang mapping to invoke CtrlP
 let g:ctrlp_map = '<leader>ff'
+"ctrlp dont change dir when open a file
+let g:ctrlp_working_path_mode = 'w'
 "Use this to customize the mappings inside CtrlP's prompt to your liking. You only need to keep the lines that you've changed the values (inside []) 
 let g:ctrlp_prompt_mappings = {
   \ 'PrtBS()':              ['<bs>', '<c-]>'],
