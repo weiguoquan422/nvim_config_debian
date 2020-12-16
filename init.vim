@@ -157,6 +157,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kdurant/verilog-testbench'
 "vim-SystemVerilog
 Plug 'WeiChungWu/vim-SystemVerilog'
+"machakann/vim-sandwich
+Plug 'machakann/vim-sandwich'
 
 
 " Initialize plugin system
