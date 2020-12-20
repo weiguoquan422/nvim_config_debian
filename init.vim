@@ -68,8 +68,6 @@ nmap <Leader>bd :call Close_current_buf()<CR>
 nmap <Leader>wv <Esc>:vs<CR>
 "close current window
 nmap <Leader>wd <Esc>:q<CR>
-"search for word under the cursor but not jump next match
-source ~/.config/nvim/starsearch.vim
 
 
 "about indent
@@ -159,6 +157,8 @@ Plug 'kdurant/verilog-testbench'
 Plug 'WeiChungWu/vim-SystemVerilog'
 "machakann/vim-sandwich
 Plug 'machakann/vim-sandwich'
+"weiguoquan422/vim-startsearch:search for word under the cursor but not jump next match, and add the word to search history
+Plug 'weiguoquan422/vim-startsearch'
 
 
 " Initialize plugin system
