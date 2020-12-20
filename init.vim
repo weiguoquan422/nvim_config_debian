@@ -158,7 +158,7 @@ Plug 'WeiChungWu/vim-SystemVerilog'
 "machakann/vim-sandwich
 Plug 'machakann/vim-sandwich'
 "weiguoquan422/vim-startsearch:search for word under the cursor but not jump next match, and add the word to search history
-Plug 'weiguoquan422/vim-startsearch'
+Plug 'weiguoquan422/vim-starsearch'
 
 
 " Initialize plugin system
@@ -346,7 +346,6 @@ syntax enable
 
 
 "Code folding based on indent
-"set foldmethod=indent
 set foldmethod=indent
 "Close the folding code when you start vim
 set nofoldenable
