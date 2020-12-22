@@ -336,6 +336,21 @@ let g:ctrlp_prompt_mappings = {
   \ }
 
 
+"sandwich
+let g:sandwich_no_default_key_mappings = 1
+silent! nmap <unique><silent> gd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
+silent! nmap <unique><silent> gr <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
+silent! nmap <unique><silent> gdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+silent! nmap <unique><silent> grb <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+
+let g:operator_sandwich_no_default_key_mappings = 1
+" add
+silent! map <unique> <Leader>sa <Plug>(operator-sandwich-add)
+" delete
+silent! xmap <unique> <Leader>sd <Plug>(operator-sandwich-delete)
+" replace
+silent! xmap <unique> <Leader>sr <Plug>(operator-sandwich-replace)
+
 
 "color scheme
 colorscheme gruvbox
