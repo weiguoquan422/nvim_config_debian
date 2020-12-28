@@ -275,6 +275,7 @@ let g:vim_markdown_conceal_code_blocks = 0
 
 "about vimtex
 let g:tex_flavor='latex'
+let g:vimtex_syntax_conceal_default=0
 
 
 "about templates
