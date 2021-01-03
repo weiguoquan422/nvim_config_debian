@@ -199,8 +199,20 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 "tagbar
-nmap <F2> :TagbarToggle<CR>
-let g:tagbar_ctags_bin='/usr/bin/ctags'
+let g:tagbar_ctags_bin = '/usr/bin/ctags'
+let g:tagbar_position = 'topleft vertical'
+
+"if filetype is markdown, F2 trigger Toc, other filetype trigger Tagbar
+function Trigger_tagbar_or_toc()
+    if &filetype ==# 'markdown'
+        :Toc
+    elseif &filetype ==# 'verilog' || &filetype ==# 'c' || &filetype ==# 'cpp'
+        :TagbarToggle
+    else
+        :q
+    endif
+endfunction
+nmap <F2> :call Trigger_tagbar_or_toc()<CR>
 
 
 "about nerdtree
@@ -271,6 +283,8 @@ let g:tex_conceal = ""
 let g:vim_markdown_math = 1
 "Disabling conceal for code fences
 let g:vim_markdown_conceal_code_blocks = 0
+"Allow for the TOC window to auto-fit when it's possible for it to shrink.It never increases its default size (half screen), it only shrinks.
+let g:vim_markdown_toc_autofit = 1
 
 
 "about vimtex
