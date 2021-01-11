@@ -205,8 +205,14 @@ let g:tagbar_position = 'topleft vertical'
 "if filetype is markdown, F2 trigger Toc, other filetype trigger Tagbar
 function Trigger_tagbar_or_toc()
     if &filetype ==# 'markdown'
-        :Toc
-    elseif &filetype ==# 'verilog' || &filetype ==# 'c' || &filetype ==# 'cpp'
+        :let bnr=bufwinnr("[Location List]")
+        if bnr>1
+            :Toc
+            :q
+        else
+            :Toc
+        endif
+    elseif &filetype ==# 'verilog' || &filetype ==# 'c' || &filetype ==# 'cpp' || &filetype ==# 'vim'
         :TagbarToggle
     else
         :q
@@ -365,6 +371,10 @@ silent! map <unique> <Leader>sa <Plug>(operator-sandwich-add)
 silent! xmap <unique> <Leader>sd <Plug>(operator-sandwich-delete)
 " replace
 silent! xmap <unique> <Leader>sr <Plug>(operator-sandwich-replace)
+
+
+"bufferline
+let g:bufferline_show_bufnr = 0
 
 
 "color scheme
