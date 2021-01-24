@@ -37,6 +37,11 @@ set mouse=a
 "dont change directory when open a file
 set noautochdir
 
+"about fold
+set viewoptions=cursor,folds,slash,unix
+set foldmethod=indent
+set foldlevel=99
+set foldenable
 
 "about mapping and Leader
 "<Leader> is ';'
@@ -106,7 +111,6 @@ let g:python_host_prog='/usr/bin/python3'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.local/share/nvim/plugged')
 
-
 "coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "nerdtree
@@ -159,7 +163,6 @@ Plug 'WeiChungWu/vim-SystemVerilog'
 Plug 'machakann/vim-sandwich'
 "weiguoquan422/vim-startsearch:search for word under the cursor but not jump next match, and add the word to search history
 Plug 'weiguoquan422/vim-starsearch'
-
 
 " Initialize plugin system
 call plug#end()
@@ -384,8 +387,3 @@ set background=dark
 "enable syntax
 syntax enable
 
-
-"Code folding based on indent
-set foldmethod=indent
-"Close the folding code when you start vim
-set nofoldenable
