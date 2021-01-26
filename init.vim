@@ -100,10 +100,6 @@ nnoremap <Leader>wk <C-W>k
 nnoremap <Leader>wj <C-W>j
 
 
-"python-provider for neovim
-let g:python_host_prog='/usr/bin/python'
-let g:python3_host_prog='/usr/bin/python3'
-
 
 
 " Specify a directory for plugins
