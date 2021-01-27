@@ -39,7 +39,7 @@ set noautochdir
 
 "about fold
 set viewoptions=cursor,folds,slash,unix
-set foldmethod=indent
+set foldmethod=manual
 set foldlevel=99
 set foldenable
 
@@ -100,6 +100,10 @@ nnoremap <Leader>wk <C-W>k
 nnoremap <Leader>wj <C-W>j
 
 
+"python-provider for neovim
+"let g:python_host_prog='/usr/bin/python'
+"let g:python3_host_prog='/usr/bin/python3'
+
 
 
 " Specify a directory for plugins
@@ -159,9 +163,6 @@ Plug 'WeiChungWu/vim-SystemVerilog'
 Plug 'machakann/vim-sandwich'
 "weiguoquan422/vim-startsearch:search for word under the cursor but not jump next match, and add the word to search history
 Plug 'weiguoquan422/vim-starsearch'
-"fzf fuzzy find
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
