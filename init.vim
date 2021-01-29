@@ -376,6 +376,7 @@ silent! xmap <unique> <Leader>sr <Plug>(operator-sandwich-replace)
 
 "bufferline
 let g:bufferline_show_bufnr = 0
+let g:bufferline_rotate = 2
 
 
 "color scheme
