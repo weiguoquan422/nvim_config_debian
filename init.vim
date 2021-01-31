@@ -1,4 +1,23 @@
-"
+"Enable file type detection
+filetype on
+"Load the corresponding plug-in according to the different types detected
+filetype plugin on
+
+set nocompatible
+
+"about encoding
+set encoding=utf-8
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+"make Vim default to Unix line endings while still supporting DOS line endings
+set fileformats=unix,dos
+set fileformat=unix
+
+"about search and display
+"ingnore case when searching with /
+set ic
+"Enable real-time search
+set incsearch
+"highlight search
 set hlsearch
 "set word wrap
 set wrap
@@ -361,6 +380,7 @@ silent! xmap <unique> <Leader>sr <Plug>(operator-sandwich-replace)
 let g:bufferline_show_bufnr = 0
 let g:bufferline_rotate = 2
 
+
 "markdown-preview
 " set to 1, nvim will open the preview window after entering the markdown buffer
 " default: 0
@@ -440,6 +460,11 @@ let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown']
 " mappings
 nmap <Leader>mt <Plug>MarkdownPreviewToggle
+
+
+"fzf
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = []
 
 
 "color scheme
