@@ -1,4 +1,12 @@
 {
+    "snippets.extends": {
+        "markdown": ["tex"],
+        "cpp": ["c"]
+    },
+    "snippets.triggerCharacters": ["$"],
+
+
+
     "clangd.disableDiagnostics": false,
 
     "bookmark.sign": {
