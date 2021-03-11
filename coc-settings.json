@@ -1,4 +1,10 @@
 {
+    "snippets.extends": {
+        "markdown": ["tex"],
+        "cpp": ["c"]
+    },
+
+
 
     "clangd.disableDiagnostics": false,
 
