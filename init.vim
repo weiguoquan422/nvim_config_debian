@@ -191,17 +191,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" coc-bookmark configuration
-nmap <Leader>bt <Plug>(coc-bookmark-toggle)
-nmap <Leader>bl :CocList bookmark<CR>
+"dont conceal in json file
+autocmd FileType json,markdown let g:vim_json_syntax_conceal = 0
 
-" coc-snippets
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 "tagbar
 let g:tagbar_ctags_bin = '/usr/bin/ctags'
@@ -312,54 +304,6 @@ let g:templates_use_licensee=0
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-
-"CtrlP
-"ctrlpline
-"nmap <leader>sf :CtrlPLine<CR>
-"Ignore files in .gitignore
-"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-"chang mapping to invoke CtrlP
-"let g:ctrlp_map = '<leader>ff'
-"ctrlp dont change dir when open a file
-"let g:ctrlp_working_path_mode = 'w'
-"Use this to customize the mappings inside CtrlP's prompt to your liking. You only need to keep the lines that you've changed the values (inside []) 
-"let g:ctrlp_prompt_mappings = {
-  "\ 'PrtBS()':              ['<bs>', '<c-]>'],
-  "\ 'PrtDelete()':          ['<del>'],
-  "\ 'PrtDeleteWord()':      ['<c-w>'],
-  "\ 'PrtClear()':           ['<c-u>'],
-  "\ 'PrtSelectMove("j")':   ['<c-j>', '<down>'],
-  "\ 'PrtSelectMove("k")':   ['<c-k>', '<up>'],
-  "\ 'PrtSelectMove("t")':   ['<Home>', '<kHome>'],
-  "\ 'PrtSelectMove("b")':   ['<End>', '<kEnd>'],
-  "\ 'PrtSelectMove("u")':   ['<PageUp>', '<kPageUp>'],
-  "\ 'PrtSelectMove("d")':   ['<PageDown>', '<kPageDown>'],
-  "\ 'PrtHistory(-1)':       ['<c-n>'],
-  "\ 'PrtHistory(1)':        ['<c-p>'],
-  "\ 'AcceptSelection("e")': ['<cr>', '<2-LeftMouse>'],
-  "\ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<c-s>'],
-  "\ 'AcceptSelection("t")': ['<c-t>'],
-  "\ 'AcceptSelection("v")': ['<c-v>', '<RightMouse>'],
-  "\ 'ToggleFocus()':        ['<s-tab>'],
-  "\ 'ToggleRegex()':        ['<c-r>'],
-  "\ 'ToggleByFname()':      ['<c-d>'],
-  "\ 'ToggleType(1)':        ['<c-f>', '<c-up>'],
-  "\ 'ToggleType(-1)':       ['<c-b>', '<c-down>'],
-  "\ 'PrtExpandDir()':       ['<tab>'],
-  "\ 'PrtInsert("c")':       ['<MiddleMouse>', '<insert>'],
-  "\ 'PrtInsert()':          ['<c-\>'],
-  "\ 'PrtCurStart()':        ['<c-a>'],
-  "\ 'PrtCurEnd()':          ['<c-e>'],
-  "\ 'PrtCurLeft()':         ['<c-h>', '<left>', '<c-^>'],
-  "\ 'PrtCurRight()':        ['<c-l>', '<right>'],
-  "\ 'PrtClearCache()':      ['<F5>'],
-  "\ 'PrtDeleteEnt()':       ['<F7>'],
-  "\ 'CreateNewFile()':      ['<c-y>'],
-  "\ 'MarkToOpen()':         ['<c-z>'],
-  "\ 'OpenMulti()':          ['<c-o>'],
-  "\ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>'],
-  "\ }
 
 
 "sandwich
@@ -494,6 +438,11 @@ let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown']
 " mappings
 nmap <Leader>mt <Plug>MarkdownPreviewToggle
+
+
+"indentLine
+"dont conceal in json file
+autocmd FileType json,markdown let g:indentLine_conceallevel = 0
 
 
 "color scheme
