@@ -191,8 +191,13 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-"dont conceal in json file
-autocmd FileType json,markdown let g:vim_json_syntax_conceal = 0
+" coc-snippets
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
 "tagbar
@@ -438,11 +443,6 @@ let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown']
 " mappings
 nmap <Leader>mt <Plug>MarkdownPreviewToggle
-
-
-"indentLine
-"dont conceal in json file
-autocmd FileType json,markdown let g:indentLine_conceallevel = 0
 
 
 "color scheme
