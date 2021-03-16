@@ -165,6 +165,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 "markdown-preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+"SirVer/ultisnips
+Plug 'SirVer/ultisnips'
 
 " Initialize plugin system
 call plug#end()
@@ -193,11 +195,11 @@ nmap <silent> gr <Plug>(coc-references)
 
 " coc-snippets
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
+"let g:coc_snippet_next = '<c-j>'
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
+"let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
+"imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
 "tagbar
@@ -443,6 +445,13 @@ let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown']
 " mappings
 nmap <Leader>mt <Plug>MarkdownPreviewToggle
+
+
+"SirVer/ultisnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=['/home/10292438@zte.intra/.config/coc/ultisnips']
 
 
 "color scheme
