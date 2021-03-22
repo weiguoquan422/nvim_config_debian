@@ -451,7 +451,7 @@ nmap <Leader>mt <Plug>MarkdownPreviewToggle
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsSnippetDirectories=['/home/10292438@zte.intra/.config/coc/ultisnips']
+let g:UltiSnipsSnippetDirectories=['~/.config/coc/SirVer_ultisnips']
 
 
 "color scheme
