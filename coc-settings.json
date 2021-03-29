@@ -8,11 +8,6 @@
 
     "clangd.disableDiagnostics": false,
 
-    "bookmark.sign": {
-        "type": "none",
-        "description": "Bookmark icon for sign column"
-    },
-
     "diagnostic.errorSign": {
         "type": "none",
         "description": "Text of error sign",
