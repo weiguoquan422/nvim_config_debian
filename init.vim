@@ -120,7 +120,7 @@ Plug 'bling/vim-bufferline'
 "CtrlP
 "Plug 'ctrlpvim/ctrlp.vim'
 "git
-Plug 'lambdalisue/gina.vim'
+Plug 'tpope/vim-fugitive'
 "gitgutter--dispaly git diff in gutter
 Plug 'airblade/vim-gitgutter'
 "nerdcommenter--comment
@@ -201,6 +201,13 @@ nmap <silent> gr <Plug>(coc-references)
 " Use <C-j> for both expand and jump (make expand higher priority.)
 "imap <C-j> <Plug>(coc-snippets-expand-jump)
 
+"dont conceal in json markdown file
+let g:vim_json_syntax_conceal = 0
+
+"indentLine
+"dont conceal in json file
+let g:indentLine_conceallevel = 0
+
 
 "tagbar
 let g:tagbar_ctags_bin = '/usr/bin/ctags'
@@ -265,15 +272,15 @@ nmap ]n <Plug>(GitGutterNextHunk)
 nmap [n <Plug>(GitGutterPrevHunk)
 
 
-"about Gina
-"Gina diff
-nmap <leader>gd :Gina diff<CR>
-"Gina status
-nmap <leader>gs :Gina status<CR>
-"Gina commit
-nmap <leader>gc :Gina commit<CR>
-"Gina log
-nmap <leader>gl :Gina log<CR>
+"about fugitive
+"fugitive diff
+nmap <leader>gd :Gvdiffsplit<CR>
+"fugitive status
+nmap <leader>gs :G<CR>
+"fugitive commit
+nmap <leader>gc :Gcommit<CR>
+"fugitive log
+nmap <leader>gl :Glog<CR>
 
 
 "about startify
