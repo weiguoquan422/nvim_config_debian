@@ -335,6 +335,18 @@ silent! xmap <unique> <Leader>sd <Plug>(operator-sandwich-delete)
 " replace
 silent! xmap <unique> <Leader>sr <Plug>(operator-sandwich-replace)
 
+"add html tag
+let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
+let g:sandwich#recipes += [
+      \   {
+      \     'external': ['it', 'at'],
+      \     'noremap' : 1,
+      \     'filetype': ['html'],
+      \     'input'   : ['t'],
+      \   },
+      \ ]
+
+
 
 "bufferline
 let g:bufferline_show_bufnr = 0
