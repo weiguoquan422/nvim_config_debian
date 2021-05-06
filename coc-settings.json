@@ -3,7 +3,7 @@
         "markdown": ["tex"],
         "cpp": ["c"]
     },
-
+    "snippets.userSnippetsDirectory": "~/.config/coc/coc_ultisnips",
 
 
     "clangd.disableDiagnostics": false,
