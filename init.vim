@@ -159,8 +159,8 @@ Plug 'machakann/vim-sandwich'
 "weiguoquan422/vim-startsearch:search for word under the cursor but not jump next match, and add the word to search history
 Plug 'weiguoquan422/vim-starsearch'
 "fzf fuzzy find
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf'
+"Plug 'junegunn/fzf.vim'
 "leaderF--fuzzy find
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 "markdown-preview
@@ -357,12 +357,12 @@ let g:bufferline_rotate = 2
 
 "fzf
 " Empty value to disable preview window
-let g:fzf_preview_window = []
+"let g:fzf_preview_window = []
 " popup window size
-let g:fzf_layout = { 'down': '45%' }
+"let g:fzf_layout = { 'down': '45%' }
 " mappings
 "nmap <Leader>ff :Files<CR>
-nmap <Leader>sf :Ag<CR>
+"nmap <Leader>sf :Ag<CR>
 "nmap <Leader>bf :Buffers<CR>
 
 
@@ -376,11 +376,11 @@ let g:Lf_ShowDevIcons = 0
 "set external tool
 let g:Lf_DefaultExternalTool = "ag"
 "fuzzy find grep using rg
-"noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
+noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
 "fuzzy find line in buffer
 noremap <leader>sb :<C-U><C-R>=printf("Leaderf line")<CR><CR>
 " search word under cursor, the pattern is treated as regex
-"noremap <leader>sd :<C-U><C-R>=printf("Leaderf rg -s -w %s ", expand("<cword>"))<CR><CR>
+noremap <leader>sd :<C-U><C-R>=printf("Leaderf rg -s -w %s ", expand("<cword>"))<CR><CR>
 "Recall last rg search result
 noremap <leader>sr :<C-U><C-R>=printf("Leaderf rg --recall")<CR><CR>
 
