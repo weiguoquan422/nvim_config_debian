@@ -374,7 +374,7 @@ let g:Lf_DisableStl = 1
 "disable icons
 let g:Lf_ShowDevIcons = 0
 "set external tool
-let g:Lf_DefaultExternalTool = "ag"
+let g:Lf_DefaultExternalTool = "rg"
 "fuzzy find grep using rg
 noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
 "fuzzy find line in buffer
@@ -477,7 +477,7 @@ let g:UltiSnipsSnippetDirectories=['~/.config/coc/SirVer_ultisnips']
 
 "color scheme
 colorscheme gruvbox
-set background=dark
+set background=light
 
 "enable syntax
 syntax enable
