@@ -167,6 +167,7 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 "SirVer/ultisnips
 Plug 'SirVer/ultisnips'
+Plug 'weiguoquan422/vim-wavedrom-instant'
 
 " Initialize plugin system
 call plug#end()
