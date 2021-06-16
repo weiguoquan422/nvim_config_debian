@@ -168,6 +168,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 "SirVer/ultisnips
 Plug 'SirVer/ultisnips'
 Plug 'weiguoquan422/vim-wavedrom-instant'
+Plug '~/.local/share/nvim/plugged/viml-learn-test'
 
 " Initialize plugin system
 call plug#end()
@@ -377,13 +378,13 @@ let g:Lf_ShowDevIcons = 0
 "set external tool
 let g:Lf_DefaultExternalTool = "rg"
 "fuzzy find grep using rg
-noremap <leader>sf :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
+noremap <leader>fs :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
 "fuzzy find line in buffer
-noremap <leader>sb :<C-U><C-R>=printf("Leaderf line")<CR><CR>
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf line")<CR><CR>
 " search word under cursor, the pattern is treated as regex
-noremap <leader>sd :<C-U><C-R>=printf("Leaderf rg -s -w %s ", expand("<cword>"))<CR><CR>
+noremap <leader>fd :<C-U><C-R>=printf("Leaderf rg -s -w %s ", expand("<cword>"))<CR><CR>
 "Recall last rg search result
-noremap <leader>sr :<C-U><C-R>=printf("Leaderf rg --recall")<CR><CR>
+noremap <leader>fr :<C-U><C-R>=printf("Leaderf rg --recall")<CR><CR>
 
 
 "markdown-preview
