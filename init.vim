@@ -167,7 +167,9 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 "SirVer/ultisnips
 Plug 'SirVer/ultisnips'
+"vim-wavedrom-instant
 Plug 'weiguoquan422/vim-wavedrom-instant'
+"viml-learn-test
 Plug '~/.local/share/nvim/plugged/viml-learn-test'
 
 " Initialize plugin system
