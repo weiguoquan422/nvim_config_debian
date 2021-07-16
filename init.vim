@@ -316,7 +316,10 @@ let g:vimtex_syntax_conceal_default=0
 
 
 "about templates
-let g:templates_use_licensee=0
+let g:templates_no_builtin_templates=1 "disable default builtin templates
+let g:templates_directory=['~/.config/coc/template'] "set templates dir
+let g:username="weiguoquan"
+let g:email="weigq3@mail2.sysu.edu.cn"
 
 
 "vim-easy-align
